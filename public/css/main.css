@@ -1,0 +1,46 @@
+.container {
+  /*
+    If you have a block-level element of a certain width, margin: 0 auto;
+    will how you center it inside its parent container.
+
+    See: http://bluerobot.com/web/css/center1.html
+    
+    Don't change the container width.
+  */
+  background-color: yellow;
+  margin: 0 auto;  
+  width: 720px;
+}
+
+.racer_table td {
+  background-color: green;
+  height: 90px;
+  width: 90px;
+}
+
+.racer_table td.active {
+    background-image: url('../player1.png');
+  background-size: 80px 80px;
+  border: 1px red;
+  background-repeat: no-repeat;
+}
+
+#player1_strip .active {
+
+  background-image: url('../player2.png');
+  background-size: 80px 80px;
+  border: 1px red;
+  background-repeat: no-repeat;
+  border: 1px red;
+}
+
+
+#player2_strip .active {
+
+  border: 1px red;
+}
+
+td{
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
