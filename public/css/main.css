@@ -1,46 +1,53 @@
 .container {
-  /*
-    If you have a block-level element of a certain width, margin: 0 auto;
-    will how you center it inside its parent container.
-
-    See: http://bluerobot.com/web/css/center1.html
-    
-    Don't change the container width.
-  */
-  background-color: yellow;
   margin: 0 auto;  
-  width: 720px;
+  width: 100%;
+  height:720px;
+  border: 1px solid;
+}
+
+h1{
+  text-align: center;
+  font-size: 4em;
 }
 
 .racer_table td {
-  background-color: green;
-  height: 90px;
-  width: 90px;
+  height: 100px;
+  width: 100px;
+  margin:0 auto;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+tr{
+  padding:10px 0 10px 0;
 }
 
-.racer_table td.active {
-    background-image: url('../player1.png');
-  background-size: 80px 80px;
-  border: 1px red;
+.racer_table .active {
+  
+  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 
 #player1_strip .active {
-
   background-image: url('../player2.png');
-  background-size: 80px 80px;
-  border: 1px red;
+  background-size: 99% 99%;
   background-repeat: no-repeat;
-  border: 1px red;
+
 }
 
 
 #player2_strip .active {
-
-  border: 1px red;
+  background-image: url('../player1.png');
+  background-size: 99% 99%;
+  background-repeat: no-repeat;
 }
 
 td{
   border-top: 1px solid;
   border-bottom: 1px solid;
+}
+
+.login{
+  height:80px;
+  width:800px;
+  margin:0 auto;
 }
