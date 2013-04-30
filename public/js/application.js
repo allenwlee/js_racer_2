@@ -19,7 +19,22 @@ $(document).ready(function() {
     });
   });
 
+// functionPlayer = function()
 
+  function finish_line (player) {
+    // var versus1 = $("#versus1").text();
+    $("#winner").text(player + " WINS!").fadeIn(function() {
+      $("#restart").fadeIn();
+    });
+
+    $("#restart").on("click", function(){
+      $("#winner").fadeOut();
+      $(this).fadeOut();
+      current1 = $("#player1_strip td:first-child").addClass("active");
+      current2 = $("#player2_strip td:first-child").addClass("active");
+    });
+    // $(".container").append('<img id='jkai' src="GoodJobSon.png" />');    
+  }
 
 
 
@@ -32,12 +47,7 @@ $(document).ready(function() {
       if (current1.index() === $("#player1_strip td:last-child").index()) {
         current1.removeClass("active");
         current2.removeClass("active");
-        var versus1 = $("#versus1").text();
-        $(".container").append(" " + versus1 + "WINS");
-        // $(".container").append('<img id='jkai' src="GoodJobSon.png" />');
-        current1 = $("#player1_strip td:first-child").addClass("active");
-        current2 = $("#player2_strip td:first-child").addClass("active");
-
+        finish_line("player1");
       }
     }
   });
@@ -50,11 +60,8 @@ $(document).ready(function() {
       var versus2 = $("#versus2").text();
       if (current2.index() === $("#player1_strip td:last-child").index()) {
         current2.removeClass("active");
-        current1  .removeClass("active");
-        $(".container").append(" "+ versus2 + "PLAYER 2 WINS");
-        current1 = $("#player1_strip td:first-child").addClass("active");
-        current2 = $("#player2_strip td:first-child").addClass("active");
-
+        current1.removeClass("active");
+        finish_line("player2");
       }
     }
   });
@@ -62,7 +69,6 @@ $(document).ready(function() {
 
 
 });
-
 
 
 keyCode: 80 = p
