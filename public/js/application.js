@@ -6,26 +6,10 @@ $(document).ready(function() {
       type: "POST",
       url: '/game/create',
       data: $(this).serialize()
-    }).done(function(){
-      $.ajax({
-        type: "get",
-        url: '/game/board'
-      }).done(function(data){
-        alert(data);
-      });
+    }).done(function(data){
+      $(".login").append(data);
     });
   });
-
-
-
-    var board_length = 6;
-
-    for ( i = 1; i < board_length; i++){
-      $("#player1_strip").append($("<td></td>"));
-      $("#player2_strip").append($("<td></td>"));
-    }
-
-
 
 
     var KEYS = {

@@ -11,7 +11,3 @@ post '/game/create' do
    p @player2
   erb :_board
 end
-
-get "/game/board" do
-erb :_board
-end
