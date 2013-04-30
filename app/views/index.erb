@@ -3,16 +3,20 @@
   
   <div class="login">
 
-    <form method="post" action="/hello">
-      <input type="text" placeholder="Player 1 Name" name="name1">
-      <input type="text" placeholder="Player 2 Name" name="name2">
-      <input type="integer" placeholder="Board Length" name="board_length">
+    <form method="post" action="/game/create">
+
+      <input id="player1" type="text" placeholder="Player 1 Name" name="name1">
+
+      <input id="player2" type="text" placeholder="Player 2 Name" name="name2">
+
+      <input id="board" type="integer" placeholder="Board Length" name="board_length">
+
       <input type="submit" value="Play!">
     </form>
 
   </div>
 
-  <div class = "gameboard">
+<!--   <div class = "gameboard">
     <table class="racer_table">
       <tr id="player1_strip">
         <td></td>
@@ -22,5 +26,5 @@
       </tr>
     </table>
   </div>
-
+ -->
 </div>
